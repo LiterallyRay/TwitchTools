@@ -2,15 +2,28 @@
 <html>
 <body>
 
-<?php
-//list of landing spots
-$arr = array("Nuketown", "Construction Site", "Estates", "Array", "Firing Range", "Train Station", "Hydro Dam", "Asylum", "Fracking Tower", "Cargo Docks", "Factory", "Turbine", "Lighthouse", "Turbine", "Rivertown", "Ghost Town");
+<p id="randomLandingSpot"></p>
 
-$randIndex = array_rand($arr);
-
-//return random location
-echo $arr[$randIndex];
-?>
+<script>
+var myArray = ["Nuketown", 
+"Construction Site", 
+"Estates", 
+"Array", 
+"Firing Range", 
+"Train Station", 
+"Hydro Dam", 
+"Asylum", 
+"Fracking Tower", 
+"Cargo Docks", 
+"Factory", 
+"Turbine", 
+"Lighthouse", 
+"Turbine", 
+"Rivertown", 
+"Ghost Town"];
+var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+document.getElementById("randomLandingSpot").innerHTML = randomItem;
+</script>
 
 </body>
 </html>
